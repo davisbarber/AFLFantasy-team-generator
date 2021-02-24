@@ -14,7 +14,7 @@ def main():
     for i in range(data.shape[0]):
         players.append(Player(data.loc[i,]))
         
-    
+    # separate players into positional lists
     
     players[0].print_to_csv()
 
