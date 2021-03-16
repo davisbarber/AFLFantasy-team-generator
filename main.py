@@ -17,6 +17,7 @@ def main():
     # separate players into positional lists
     
     players[0].print_to_csv()
+    
 
 if __name__ == "__main__":
     main()

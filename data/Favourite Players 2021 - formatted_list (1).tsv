@@ -1,0 +1,59 @@
+firstName	lastName	pos1	pos2	include	lock	bench	price	average	last3Avg	projected
+Brodie	Grundy	Ruck		1	0	0	$867k	113	107	109
+Zach	Merrett	Midfielder		1	1	0	$884k	115	116	111
+Reilly	O'Brien	Ruck		1	0	0	$828k	108	121	106
+Max	Gawn	Ruck		1	1	0	$944k	123	117	106
+Rory	Laird	Defender	Midfielder	1	0	0	$763k	100	115	99
+Sam	Walsh	Midfielder		1	1	0	$739k	96	119	93
+Stephen	Coniglio	Midfielder		1	0	0	$744k	97	94	94
+Jayden	Short	Defender		1	1	0	$694k	90	92	78
+Caleb	Daniel	Defender		1	0	0	$676k	88	120	89
+Callum	Mills	Defender		1	0	0	$705k	92	97	85
+Dan	Houston	Defender		1	0	0	$697k	91	113	90
+Jarrod	Witts	Ruck		1	0	0	$615k	80	65	73
+Zac	Bailey	Midfielder	Forward	1	0	0	$590k	77	67	61
+Tom	Phillips	Midfielder	Forward	1	0	0	$602k	79	80	83
+Zak	Butters	Forward		1	1	0	$595k	78	77	63
+Jamie	Elliott	Midfielder	Forward	1	0	0	$545k	71	78	80
+Ethan	Hughes	Defender		1	0	0	$492k	64	77	65
+Josh	Dunkley	Midfielder	Forward	1	0	0	$741k	97	108	97
+Tim	Taranto	Midfielder		1	1	0	$718k	94	84	92
+Rory	Sloane	Midfielder		1	0	0	$580k	76	86	96
+Jaidyn	Stephenson	Forward		1	0	0	$470k	61	55	66
+Jye	Caldwell	Midfielder	Forward	1	0	0	$502k	67	74	74
+Jordan	De	Goey	Forward	1	0	0	$605k	75	79	75
+Tom	Atkins	Forward		1	0	0	$385k	50	71	53
+Matt	Rowell	Midfielder		1	1	0	$574k	88	76	110
+Tom	Green	Midfielder		1	0	0	$443k	65	74	70
+Oleg	Markov	Defender		1	0	0	$370k	53	50	53
+Hayden	Young	Defender		1	0	0	$337k	52	57	52
+Orazio	Fantasia	Defender	Forward	1	0	0	$353k	49	52	62
+Joe	Daniher	Forward		1	1	0	$432k	60	44	58
+Jordan	Clark	Defender	Midfielder	1	0	0	$422k	69	69	70
+Isaac	Cumming	Defender		1	0	0	$355k	58	58	57
+Paddy	Dow	Midfielder	Forward	1	0	0	$323k	42	42	51
+Connor	Idun	Defender		1	0	0	$221k	38	38	38
+Sam	Berry	Midfielder		1	0	1	$216k	0	0	47
+Connor	Downie	Midfielder		1	0	0	$202k	0	0	46
+Riley	Collier-Dawkins	Midfielder		1	0	1	$170k	0	0	44
+Tom	Powell	Midfielder		1	0	0	$246k	0	0	50
+Charlie	Lazzaro	Midfielder		1	0	1	$200k	0	0	46
+James	Jordon	Midfielder		1	1	1	$170k	0	0	44
+Errol	Gulden	Midfielder		1	1	1	$208k	0	0	47
+Jimmy	Webster	Defender		1	0	0	$316k	0	0	65
+Braeden	Campbell	Midfielder	Forward	0	0	0	$262k	0	0	48
+Ely	Smith	Midfielder	Forward	1	0	1	$170k	0	0	41
+Trent	Bianco	Defender	Midfielder	0	0	1	$170k	0	0	40
+Tyler	Brockman	Midfielder	Forward	1	0	1	$180k	0	0	42
+Harrison	Jones	Forward		1	0	1	$170k	0	0	38
+James	Rowe	Forward		1	1	0	$196k	0	0	40
+Miles	Bergman	Forward		1	0	1	$170k	0	0	38
+Matt	Flynn	Ruck		1	0	0	$170k	0	0	42
+Thomas	Highmore	Defender		1	0	1	$182k	0	0	38
+Will	Gould	Defender		1	0	1	$170k	0	0	37
+Josh	Treacy	Ruck	Forward	1	0	1	$170k	0	0	40
+Lloyd	Meek	Ruck		1	0	1	$170k	0	0	42
+Isaac	Chugg	Defender	Forward	1	0	1	$170k	0	0	38
+Jacob	Koschitzke	Defender		1	1	1	$170k	0	0	37
+Alec	Waterman	Forward		1	0	1	$170k	0	0	38
+Paul	Hunter	Ruck		1	0	1	$170k	0	0	42
