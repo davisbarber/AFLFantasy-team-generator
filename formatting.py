@@ -24,6 +24,9 @@ def format_player_data(data):
     
     # add price category column
     df = add_price_category(df)
+    
+    # add column for average between all score columns
+    df.loc[:, COMBINED] = df.loc[:, (AVERAGE, PROJECTED, LAST3AVG, AAMI)].mean(axis = 1)
     return df
 
 
