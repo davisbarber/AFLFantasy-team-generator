@@ -1,7 +1,8 @@
 
 
 # team size constraints
-
+PRICE_PREMIUM = 650
+PRICE_ROOKIE = 270
 
 # Team Structure for Defenders
 DEF_TOTAL = 8
@@ -65,3 +66,9 @@ LAST3AVG = 'last3Avg'
 PROJECTED = 'projected'
 AAMI = 'aami'
 COMBINED = 'combined'
+
+# generation constants
+FORWARD = 'Forward'
+MIDFIELDER = 'Midfielder'
+RUCK = 'Ruck'
+DEFENDER = 'Defender'
