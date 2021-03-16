@@ -1,22 +1,25 @@
 import pandas as pd
 from constants import *
-from Player import Player
+from formatting import format_player_data
 
 # main execution function to read player list and generate fantasy teams.
 def main():
     data = pd.read_csv('data/fav_players.csv')
-    print(data.shape[0])
-    print(data.loc[0,].firstName)
+
     
-    # create players list
-    players = []
+    # Format
+    data = format_player_data(data)
+    print(data[:5])
     
-    for i in range(data.shape[0]):
-        players.append(Player(data.loc[i,]))
-        
-    # separate players into positional lists
-    
-    players[0].print_to_csv()
+    # separate into postions
+    defenders = pd.concat([data[data[POSITION1] == 'Defender'], data[data[POSITION2] == 'Defender']])
+
+    forwards = pd.concat([data[data[POSITION1] == 'Forward'], data[data[POSITION2] == 'Forward']])
+
+    midfielders = pd.concat([data[data[POSITION1] == 'Midfielder'], data[data[POSITION2] == 'Midfielder']])
+
+    rucks = pd.concat([data[data[POSITION1] == 'Ruck'], data[data[POSITION2] == 'Ruck']])
+    print(rucks)
     
 
 if __name__ == "__main__":
