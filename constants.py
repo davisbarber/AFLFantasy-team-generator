@@ -1,12 +1,61 @@
-# fantasy team constants
-SALARY_CAP = 13000 # thousands of dollars
-TEAM_SIZE = 30
-NUM_OF_DEFS = 8
-NUM_OF_MIDS = 10
-NUM_OF_RUCKS = 3
-NUM_OF_FWDS = 8
-NUM_OF_UTILITY = 1
+from enum import Enum
 
-PREMIUM = 0
-MID_RANGE = 1
-ROOKIE = 2
+# team size constraints
+
+
+class Defenders(Enum):
+    """Team Structure for Defenders """
+    TOTAL = 8
+    PREMIUM = 3
+    MID_PRICE = 3
+    ROOKIE = 0
+    BENCH = 2
+
+
+class Mids(Enum):
+    """ Team Structure for Mids """
+    TOTAL = 10
+    PREMIUM = 3
+    MID_PRICE = 3
+    ROOKIE = 2
+    BENCH = 2
+
+
+class Rucks(Enum):
+    """Team Structure for Rucks """
+    TOTAL = 3
+    PREMIUM = 1
+    MID_PRICE = 0
+    ROOKIE = 1
+    BENCH = 1
+
+
+class Forwards(Enum):
+    """Team Structure for Forwards """
+    TOTAL = 8
+    PREMIUM = 1
+    MID_PRICE = 3
+    ROOKIE = 2
+    BENCH = 2
+
+
+# fantasy salary constraints
+class Salary(Enum):
+
+    CAP = 13000  # thousands of dollars
+
+
+class Col(Enum):
+    """Column names for input data"""
+    FIRSTNAME = 'firstName'
+    LASTNAME = 'LASTNAME'
+    POSITION1 = 'pos1'
+    POSITION2 = 'pos2'
+    INCLUDE = 'include'
+    LOCK = 'lock'
+    BENCH = 'bench'
+    PRICE = 'price'
+    AVERAGE = 'average'
+    LAST3AVG = 'last3Avg'
+    PROJECTED = 'projected'
+    AAMI = 'aami'
