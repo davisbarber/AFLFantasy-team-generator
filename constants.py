@@ -43,6 +43,14 @@ class Forwards(Enum):
 class Salary(Enum):
 
     CAP = 13000  # thousands of dollars
+    DEF_MIN = 3000
+    DEF_MAX = 4000
+    MID_MIN = 3000
+    MID_MAX = 6000
+    RUCK_MIN = 1000
+    RUCK_MAX = 1850
+    FWD_MIN = 3000
+    FWD_MAX = 4000
 
 
 class Col(Enum):
