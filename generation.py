@@ -1,11 +1,12 @@
 from constants import *
 import itertools
 from functools import reduce
+from helpers import *
 
 # various functions to generate combinations for each line
 
 
-def line_combinations(players, line, use_structure=True):
+def line_combinations(players, line, min_salary, max_salary, use_structure=True,):
     """returns combinations of players that fit salary constraints for given [line]
 
     Args:
@@ -46,21 +47,21 @@ def line_combinations(players, line, use_structure=True):
                                           arrangement[4] - len(onfield_locked) - arrangement[3]))
     onfield = list(map(lambda x: onfield_locked + x, onfield))
 
-    # add combinations of unlocked mids to list of locked mids
-    premium_combs = list(itertools.combinations(
-        premium.index, arrangement[0] - len(premium_lock)))
-    premium_combs = list(
-        map(lambda x: tuple(premium_lock.index) + x, premium_combs))
+    if use_structure:
+        # add combinations of unlocked mids to list of locked mids
+        premium_combs = list(itertools.combinations(premium.index, arrangement[0] - len(premium_lock)))
+        premium_combs = list(
+            map(lambda x: tuple(premium_lock.index) + x, premium_combs))
 
-    mid_range_combs = list(itertools.combinations(
-        mid_range.index, arrangement[1] - len(mid_range_lock)))
-    mid_range_combs = list(
-        map(lambda x: tuple(mid_range_lock.index) + x, mid_range_combs))
+        mid_range_combs = list(itertools.combinations(
+            mid_range.index, arrangement[1] - len(mid_range_lock)))
+        mid_range_combs = list(
+            map(lambda x: tuple(mid_range_lock.index) + x, mid_range_combs))
 
-    rookie_combs = list(itertools.combinations(
-        rookie.index, arrangement[2] - len(rookie_lock)))
-    rookie_combs = list(
-        map(lambda x: tuple(rookie_lock.index) + x, rookie_combs))
+        rookie_combs = list(itertools.combinations(
+            rookie.index, arrangement[2] - len(rookie_lock)))
+        rookie_combs = list(
+            map(lambda x: tuple(rookie_lock.index) + x, rookie_combs))
 
     bench_combs = list(itertools.combinations(
         bench.index, arrangement[3] - len(bench_lock)))
@@ -78,12 +79,43 @@ def line_combinations(players, line, use_structure=True):
     combinations = list(itertools.product(*combinations_array))
 
     # convert to single array for each combination
-    formatted_combinations = []
-    test = ()
+    results = []
+    
     for comb in combinations:
-        formatted_combinations.append(reduce(lambda a, b: a + b, comb))
+        formatted_comb = reduce(lambda a, b: a + b, comb)
+        salary = get_total_salary(formatted_comb, players)
+        if salary >= min_salary and salary <= max_salary:
+            results.append((formatted_comb, salary))
 
-    return formatted_combinations
+    
+    return results
+
+
+def remove_invalid_salary(teams, player_data, min_salary=SALARY_CAP - 30, max_salary=SALARY_CAP):
+    """removes all the teams with too low or high salary.
+
+    Args:
+        teams (list[tuple]): team combinations list
+        min_salary (int, optional): Defaults to SALARY_CAP-200.
+        max_salary (int, optional): Defaults to SALARY_CAP.
+    """
+
+    filtered_teams = []
+
+    for team in teams:
+        salary = team[1]
+
+        if salary >= min_salary and salary <= max_salary:
+            # valid salary 29 players
+            filtered_teams.append(team)
+            # add sum of scores too
+            # sums = data.loc[team, ['average', 'projected', 'last3Avg', 'aami']].sum()
+            # average.append(sums.average)
+            # projected.append(sums.projected)
+            # last3Avg.append(sums.last3Avg)
+            # aami.append(sums.aami)
+
+    return filtered_teams
 
 
 def get_line_arrangement(line):

@@ -40,7 +40,7 @@ ROOKIE = 2
 
 
 # fantasy salary constraints
-SALARY_CAP = 13000  # thousands of dollars
+SALARY_CAP = 12830  # thousands of dollars
 SALARY_DEF_MIN = 3000
 SALARY_DEF_MAX = 4000
 SALARY_MID_MIN = 3000
