@@ -9,7 +9,7 @@ from helpers import *
 
 # main execution function to read player list and generate fantasy teams.
 def main():
-    data = pd.read_csv('data/gawn_witts.csv')
+    data = pd.read_csv('data/last_list.csv')
     print('''--------------------------\n
 --------------------------\n
 --------------------------\n
